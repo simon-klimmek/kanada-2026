@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest: #1B4332;
+    --color-amber: #D4A017;
+    --color-cream: #FAFAF5;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-cream text-forest font-serif antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-fraunces;
+  }
+
+  ::selection {
+    @apply bg-amber/30 text-forest;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-200;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-forest/30 rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg
+           bg-forest text-cream font-serif font-medium text-sm
+           hover:bg-forest-600 active:scale-95
+           transition-all duration-150 ease-in-out;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg
+           border-2 border-forest text-forest font-serif font-medium text-sm
+           hover:bg-forest hover:text-cream active:scale-95
+           transition-all duration-150 ease-in-out;
+  }
+
+  .btn-amber {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg
+           bg-amber-400 text-forest font-serif font-semibold text-sm
+           hover:bg-amber-300 active:scale-95
+           transition-all duration-150 ease-in-out;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-cream-300 overflow-hidden;
+  }
+
+  .section-title {
+    @apply font-fraunces text-3xl md:text-4xl text-forest font-light tracking-tight;
+  }
+
+  .prose-kanada {
+    @apply font-serif text-base leading-relaxed text-forest/90
+           [&>p]:mb-4 [&>h2]:font-fraunces [&>h2]:text-2xl [&>h2]:mt-8 [&>h2]:mb-3
+           [&>h3]:font-fraunces [&>h3]:text-xl [&>h3]:mt-6 [&>h3]:mb-2
+           [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-4
+           [&>blockquote]:border-l-4 [&>blockquote]:border-amber-400
+           [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-forest/70;
+  }
+}
+
+/* Cinematic image overlay gradient */
+.image-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(27, 67, 50, 0.6) 100%
+  );
+}
