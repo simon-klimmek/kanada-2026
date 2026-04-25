@@ -23,7 +23,7 @@ export default function AdminMediaPage() {
           Fotos auswählen (coming soon)
         </button>
         <p className="text-xs text-forest/30 font-serif mt-3">
-          Supabase Storage Bucket "photos" muss zuerst angelegt werden.
+          Supabase Storage Bucket &ldquo;photos&rdquo; muss zuerst angelegt werden.
         </p>
       </div>
     </div>

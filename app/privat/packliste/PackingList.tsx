@@ -28,7 +28,7 @@ export default function PackingList({ initialItems }: Props) {
     })
   }
 
-  const categories = [...new Set(items.map(i => i.category))]
+  const categories = Array.from(new Set(items.map(i => i.category)))
   const total = items.length
   const packed = items.filter(i => i.is_packed).length
 
